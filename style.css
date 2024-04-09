@@ -1,0 +1,435 @@
+*{
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 2000px;
+}
+
+/* Header & Navbar */
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: green;
+    padding: 0.5rem 5%;
+    border-bottom: 1px solid yellow;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99; 
+}
+
+nav .navbar-logo a img{
+    height: 45px;
+}
+
+nav .navbar-nav{
+    align-items: end;
+}
+nav .navbar-nav a{
+    display: inline-block;
+    margin: 0.4rem;
+
+    font-size: 1.1rem;
+    color: yellow;
+
+}
+
+nav .navbar-nav a:hover{
+
+    color: whitesmoke;
+
+}
+
+nav .navbar-nav a::after{
+
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid whitesmoke;
+    transform: scaleX(0);
+    transition: 0.3s linear;
+
+}
+
+nav .navbar-nav a:hover::after {
+
+    transform: scaleX(0.5);
+
+}
+
+/* Landing Page */
+
+.hero{
+    min-height: 100vh; 
+    align-items: center;
+
+    background-image: linear-gradient(rgba(248, 252, 136, 0.5),rgba(29, 28, 28, 0.75) ),url(../images/UNSIL.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+
+}
+
+.hero .landing-page{
+   
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.hero .landing-page h1{
+    font-size: 3.5rem;
+    color: rgb(210, 210, 40);
+    
+}
+
+.hero .landing-page p{
+    
+    color: whitesmoke;
+    font-size: 1.5rem;
+    margin-left: 5.3rem;
+    line-height: 1.5;
+}
+
+.hero .landing-page .tombol{
+    margin-top: 1rem;
+    margin-left: 10rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    color: white;
+    background-color: green;
+    border-radius: 0.5rem;
+
+    box-shadow: 1px 1px 3px rgba(1, 1, 1, 0.5);
+}
+
+
+/* Menu-responsive */
+
+#menu{
+    display: none;
+}
+
+/* Main  */
+
+main{
+
+    display: flex;
+    overflow: auto;
+}
+
+
+#content{
+    flex : 5; 
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+
+.content h2{
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+    
+}
+
+.content h2 span{
+    color: yellow;
+}
+
+
+/* Konten Tentang*/
+
+.tentang{
+    padding: 6rem 7% 1.4rem;
+    
+
+    flex-wrap: wrap;
+}
+
+.tentang .konten-tentang{
+    display: flex;
+}
+
+.tentang .konten-tentang .konten-tentang-img{
+    flex: 1 1 7rem;
+}
+
+.tentang .konten-tentang .konten-tentang-img img{
+
+    height: 220px;
+    width: 220px;
+
+    margin-top: 3rem;
+}
+
+.tentang .konten-tentang .konten-tentang-text{
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.tentang .konten-tentang .konten-tentang-text h3{
+    margin: 2rem;
+}
+
+.tentang .konten-tentang .konten-tentang-text ol{
+    margin: 2rem;
+    
+    line-height: 1.8;
+}
+
+.tentang .konten-tentang .konten-tentang-text p{
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+.tentang .konten-tentang .konten-tentang-text span{
+    color: rgb(219, 219, 0);
+}
+
+
+/* Konten Akademik */
+
+.akademik{
+    padding: 6rem 7% 1.4rem;
+    flex-wrap: wrap;
+}
+
+.akademik p.sub{
+    margin-bottom: 2rem;
+}
+.akademik .konten-akademik{
+    display: flex;
+}
+
+.akademik .konten-akademik .konten-akademik-img{
+    flex: 1 1 10rem;
+    margin-right: 4rem;
+}
+
+.akademik .konten-akademik .konten-akademik-img img{
+    margin-top: 20px;
+}
+
+.akademik .konten-akademik .konten-akademik-text{
+    flex: 1 1 35rem; 
+    padding: 0 1rem;
+
+    line-height: 2;
+}
+
+.akademik .konten-akademik .konten-akademik-text li {
+    margin: auto 3rem;
+}
+
+/* Konten Layanan  */
+
+.layanan {
+   padding: 5rem;   
+}
+
+.layanan p.sub{
+    text-align: center;
+}
+
+.layanan .konten-layanan{
+    display: flex;
+    margin-top: 2rem;
+    padding: 2rem;
+    flex: 1 1 1rem;
+    
+    object-fit: cover;
+    border: 2px solid black;
+    
+    background-color: rgb(244, 244, 231);
+
+}
+
+.layanan .konten-layanan .map{
+    
+    margin-right: 1rem;
+}
+
+.layanan .konten-layanan .map iframe{
+    border: 2px solid black;
+}
+
+.layanan .konten-layanan .map h3{
+    margin-bottom: 1rem;
+}
+
+.layanan .konten-layanan .text{
+    
+    width: 100%;
+    align-items: center;
+    margin: 0 1rem; 
+}
+
+.layanan .konten-layanan .text h3{
+
+    margin-bottom: 1rem;
+}
+
+/* Konten Aside */
+
+aside{
+
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.identitas{
+    background-color: rgb(246, 246, 236);
+    box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.5);
+
+    margin-top: 10rem;
+    border-radius: 10px;
+    padding: 0.5rem 2rem;
+
+    text-align: center;
+    line-height: 1.2;
+}
+aside header h2{
+    text-align: center;
+    margin: 10px 0; 
+}
+
+aside img{
+
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+aside table{
+    margin-left: auto;
+    margin-right: auto;
+
+    border-spacing: 15px;
+}
+
+/* Footer */
+
+footer{
+    padding: 20px;
+    color: white;
+    background-color:green;
+  
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 1366px) {
+    html{
+        font-size: 75%;
+    }
+    main aside{
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 825px){
+    .hero .landing-page{
+        font-size: 65%;
+    }
+
+    .hero .landing-page h1{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .hero .landing-page p{
+        text-align: center;
+        font-size: 15px;
+        text-align: center;
+        margin-left: 0.5rem;
+    }
+
+    .hero .landing-page .tombol{
+
+        margin-top: 1rem;
+        margin-left: 6.2rem;
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    html{
+        font-size: 65%;
+    }
+
+    .navbar-nav #menu{
+        display: inline-block;
+    }
+
+    nav .navbar-nav{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgb(249, 246, 246);
+        width: 30rem;
+        height: 100vh;
+        transition: 0.5s;
+    }
+
+    nav .navbar-nav.active{
+        right: 0;
+    }
+
+    nav .navbar-button.active{
+        right: 0;
+    }
+
+    nav .navbar-nav a{
+        color: black;
+        display: block;
+        margin: 1.5rem;
+        font-size: 2rem;
+
+        border-bottom: 0.1rem solid whitesmoke;
+
+    }
+
+    nav .navbar-nav a:hover{
+        color: black;
+    }
+
+    nav .navbar-nav a::after{
+        transform-origin: 0 0;
+    }
+
+    nav .navbar-nav a:hover::after{
+        transform: scaleX(0.3);
+    }
+
+    main aside{
+        align-self: stretch;
+    }
+}
